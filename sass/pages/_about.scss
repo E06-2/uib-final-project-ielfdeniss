@@ -1,0 +1,19 @@
+.section-about{
+
+background-color: lemonchiffon;
+height: 65vh;
+
+
+    &--content{
+        display: flex;
+        justify-content: space-between;
+    }
+    .section-about__information{
+      background-color: khaki;
+    }
+    .section-about__photo{
+        background-color: lawngreen;
+    }
+
+}
+

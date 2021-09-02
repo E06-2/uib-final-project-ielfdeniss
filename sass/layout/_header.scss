@@ -10,6 +10,7 @@
         background-position: top;
         height: 85vh;
         font-size: 2.6rem;
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
     .navigation{
         display: flex;
         align-items: center;

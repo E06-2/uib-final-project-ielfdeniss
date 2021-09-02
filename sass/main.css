@@ -26,6 +26,8 @@ body {
   background-position: top;
   height: 85vh;
   font-size: 2.6rem;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
 
 .header .navigation {
@@ -52,5 +54,27 @@ body {
 
 .header .navigation--menu--list__item {
   background-color: blue;
+}
+
+.section-about {
+  background-color: lemonchiffon;
+  height: 65vh;
+}
+
+.section-about--content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.section-about .section-about__information {
+  background-color: khaki;
+}
+
+.section-about .section-about__photo {
+  background-color: lawngreen;
 }
 /*# sourceMappingURL=main.css.map */
