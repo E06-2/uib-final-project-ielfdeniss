@@ -5,10 +5,45 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.945);
+  list-style: none;
 }
 
 html {
   font-size: 62.5%;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 75%;
+    color: yellowgreen;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  html .navigation {
+    font-size: 3rem;
+  }
 }
 
 body {
@@ -20,17 +55,20 @@ body {
 }
 
 .header {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(29, 31, 31, 0.8)), to(rgba(173, 160, 160, 0.8))), url(../../img/header.jpeg);
-  background-image: linear-gradient(to right bottom, rgba(29, 31, 31, 0.8), rgba(173, 160, 160, 0.8)), url(../../img/header.jpeg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(21, 22, 22, 0.8)), to(rgba(117, 112, 112, 0.8))), url(../../img/header.jpeg);
+  background-image: linear-gradient(to right bottom, rgba(21, 22, 22, 0.8), rgba(117, 112, 112, 0.8)), url(../../img/header.jpeg);
   background-size: cover;
   background-position: top;
   height: 85vh;
-  font-size: 2.6rem;
+  font-size: 1.8rem;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  color: rgba(255, 255, 255, 0.945);
 }
 
 .header .navigation {
+  font-size: 2rem;
+  height: 7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,9 +78,85 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  background-color: black;
+}
+
+@media only screen and (max-width: 75em) {
+  .header .navigation {
+    font-size: 3rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .header .navigation--checkbox:checked ~ .navigation--menu {
+    opacity: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.header .navigation--checkbox {
+  display: none;
+  position: absolute;
+  font-size: 8rem;
+  top: 5rem;
+  right: 5rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .header .navigation--menu {
+    top: 10rem;
+    position: absolute;
+    width: 100%;
+    background: black transparent;
+    display: none;
+    height: 50vh;
+  }
+  .header .navigation--menu--list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: auto;
+    text-align: center;
+  }
 }
 
 .header .navigation--menu--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: c;
+          flex-direction: c;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .navigation--menu--list__item {
+  margin: 2rem 3rem;
+}
+
+.header .navigation--menu--list__item:hover {
+  background-color: #2e2c2c;
+}
+
+.header .navigation--user {
+  margin-right: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,10 +164,39 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.header .navigation--menu--list__item {
-  background-color: blue;
+@media only screen and (max-width: 75em) {
+  .header .navigation--user {
+    margin-top: 2rem;
+  }
+}
+
+.header .navigation--user__photo {
+  height: 3.75rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.header .navigation--user__name {
+  font-size: 3rem;
+}
+
+.header .navigation--button {
+  font-size: 3.4rem;
+  position: absolute;
+  top: 5rem;
+  right: 5rem;
+  display: none;
+}
+
+@media only screen and (max-width: 75em) {
+  .header .navigation--button {
+    display: block;
+  }
 }
 
 .section-about {

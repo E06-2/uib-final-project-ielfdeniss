@@ -4,9 +4,36 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;  
+    color: $main-color;  
+    list-style: none;
+
 }
 html{
     font-size:  62.5%;
+    text-decoration: none; 
+    
+    @include size(phone) { 
+        font-size: 75%; 
+        color: yellowgreen;
+    }
+    @include size(tab-hor) { 
+        font-size: 56.25%; 
+    }
+
+    @include size(tab-ver) {
+        font-size: 50%;
+    }
+    
+    @include size(big-desktop) {
+        font-size: 75%; 
+    } 
+    @include hamburger{
+        .navigation{
+            font-size: 3rem;
+        }
+    }
+     
 }
 body{
     padding: 3rem;
@@ -15,4 +42,7 @@ body{
 .container{
     background-color: aqua;
   
+}
+a{
+    
 }
