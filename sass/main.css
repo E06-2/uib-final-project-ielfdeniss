@@ -454,4 +454,89 @@ body {
   display: inline-block;
   padding: 10rem 0;
 }
+
+.skills .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+@media only screen and (max-width: 75em) {
+  .skills .cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.skills .cards .card {
+  position: relative;
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  width: 20%;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .skills .cards .card {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 75em) {
+  .skills .cards .card {
+    width: 70%;
+  }
+}
+
+.skills .cards .card__image {
+  height: 23rem;
+}
+
+.skills .cards .card__image img {
+  width: 100%;
+}
+
+.skills .cards .card__front, .skills .cards .card__back {
+  -webkit-transition: all .8s ease;
+  transition: all .8s ease;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  min-height: 30rem;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+.skills .cards .card__back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.skills .cards .card_header {
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  top: 7rem;
+}
+
+.skills .cards .card:hover > .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.skills .cards .card:hover > .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+
+.footer {
+  height: 30vh;
+  background-color: grey;
+}
 /*# sourceMappingURL=main.css.map */
