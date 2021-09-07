@@ -1,19 +1,105 @@
-.section-about{
+.section-about {
+  line-height: 5rem;
+ 
+  .bg--heading {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    padding: 10rem 0;
+    margin-top: -5vh;
+  }
 
-background-color: lemonchiffon;
-height: 65vh;
 
 
-    &--content{
-        display: flex;
-        justify-content: space-between;
+  &--content {
+    display: flex;
+    justify-content: space-between;
+    @include hamburger{
+      flex-direction: column;
+    } 
+
+    .sm--heading {
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+      &:last-child {
+        margin-bottom: 3rem;
+      }
+    
     }
-    .section-about__information{
-      background-color: khaki;
+    .paragraf {
+      font-size: 1.6rem;
+     
     }
-    .section-about__photo{
-        background-color: lawngreen;
-    }
+  }
+  .section-about__information {
 
+    width: 50%;
+    @include hamburger{
+     width: 100%;
+  
+    } 
+    
+   
+  }
+  .section-about__photo {
+    @include hamburger{
+     width: 100%;
+     height: 50vh;
+     } 
+    position: relative;
+    background-color: lawngreen;
+    width: 50%;
+    &:hover .composition:not(:hover) {
+      transform: scale(.9);
+  }
+    .composition{
+      width: 60%;
+      height: 55%;
+      box-shadow: 0 1.5rem 4rem rgba(black, .4);
+      border: solid 2px white;
+      border-radius: 2px;
+      position: absolute;
+      z-index: 10;
+      outline-offset: 2rem;
+      &:hover {
+        border: none;
+        outline: 1rem solid white;
+        transform: scale(1.2) translateY(-.5rem);
+        box-shadow: 0 2.5rem 4rem rgba(black, .8);
+        z-index: 20;
+       
+    }
+      img{
+        width: 100%;
+        height: 100%;
+      }
+      &:nth-child(1) {
+        left: 0rem;
+        top:  0rem;
+      }
+      &:nth-child(2) {
+        right: 0rem;
+        top: 0rem;
+  
+      }
+      &:nth-child(3) {
+        left: 0rem;
+        bottom: 0rem;
+      }
+      &:nth-child(4) {
+        right: 0rem;
+        bottom: 0rem;
+      }
+      &:nth-child(5) {
+        right: 25%;
+        top: 25%;
+      }
+     }
+    
+
+  }
 }
-

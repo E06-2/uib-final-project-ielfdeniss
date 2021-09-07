@@ -12,6 +12,7 @@
 html{
     font-size:  62.5%;
     text-decoration: none; 
+    text-align: center;
     
     @include size(phone) { 
         font-size: 75%; 
@@ -22,11 +23,11 @@ html{
     }
 
     @include size(tab-ver) {
-        font-size: 50%;
+        font-size: 60%;
     }
     
     @include size(big-desktop) {
-        font-size: 75%; 
+        font-size: 65%; 
     } 
     @include hamburger{
         .navigation{
@@ -43,6 +44,4 @@ body{
     background-color: aqua;
   
 }
-a{
-    
-}
+
