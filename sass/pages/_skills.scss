@@ -1,0 +1,76 @@
+.skills {
+  line-height: 5rem;
+
+  .bg--heading {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: inline-block;
+    padding: 10rem 0;
+  }
+  .cards {
+
+    display: flex;
+    justify-content: space-around;
+
+    @include hamburger{
+        flex-direction: column;
+    }
+
+    .card {
+      position: relative;
+      perspective: 150rem;
+      width: 20%;
+
+     @include size(phone) { 
+      width: 100%;
+    }
+    @include hamburger{
+        width: 70%;
+    }
+    
+     
+
+
+      &__image {
+        height: 23rem;
+        img {
+          width: 100%;
+        }
+      }
+
+      &__front,
+      &__back {
+        transition: all .8s ease;
+        backface-visibility: hidden;
+        min-height: 30rem;
+
+        border-radius: 3px;
+
+        box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
+      }
+      &__back {
+        transform: rotateY(180deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &_header {
+        font-size: 3rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        top: 7rem;
+      }
+   
+      &:hover > .card__front {
+        transform: rotateY(-180deg);
+        
+
+      }
+
+      &:hover >.card__back {
+        transform: rotateY(0);
+      }
+    }
+  }
+}
