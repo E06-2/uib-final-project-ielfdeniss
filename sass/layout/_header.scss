@@ -1,6 +1,6 @@
 .header {
   background-image: linear-gradient(
-      to right bottom,
+      to bottom,
       rgba(rgb(21, 22, 22), 0.8),
       rgba(rgb(117, 112, 112), 0.8)
     ),
@@ -14,6 +14,14 @@
   @include hamburger {
     height: 65vh;
   }
+
+
+&::after{
+  @include drop-effect;
+   
+   
+
+}
 
   .navigation {
     font-size: 2rem;

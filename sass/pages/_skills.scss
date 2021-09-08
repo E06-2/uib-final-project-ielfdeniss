@@ -1,5 +1,6 @@
 .skills {
   line-height: 5rem;
+  margin-bottom: 10rem;
 
   .bg--heading {
     font-size: 3.5rem;
@@ -9,12 +10,15 @@
     padding: 10rem 0;
   }
   .cards {
-
     display: flex;
     justify-content: space-around;
+    @include size(tab-hor) {
+      flex-wrap: wrap;
+    }
 
-    @include hamburger{
-        flex-direction: column;
+    @include size(phone) {
+      flex-direction: column;
+      align-content: space-around;
     }
 
     .card {
@@ -22,15 +26,19 @@
       perspective: 150rem;
       width: 20%;
 
-     @include size(phone) { 
-      width: 100%;
-    }
-    @include hamburger{
-        width: 70%;
-    }
-    
-     
-
+      @include size(tab-hor) {
+        width: 35%;
+        margin-bottom: 15%;
+      }
+      @include size(tab-ver) {
+        width: 35%;
+        margin-bottom: 10%;
+      }
+      @include size(phone) {
+        width: 60%;
+        margin: auto;
+        margin-bottom: 3rem;
+      }
 
       &__image {
         height: 23rem;
@@ -41,7 +49,7 @@
 
       &__front,
       &__back {
-        transition: all .8s ease;
+        transition: all 0.8s ease;
         backface-visibility: hidden;
         min-height: 30rem;
 
@@ -61,14 +69,12 @@
         text-transform: uppercase;
         top: 7rem;
       }
-   
+
       &:hover > .card__front {
         transform: rotateY(-180deg);
-        
-
       }
 
-      &:hover >.card__back {
+      &:hover > .card__back {
         transform: rotateY(0);
       }
     }
