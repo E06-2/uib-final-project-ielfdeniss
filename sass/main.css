@@ -72,17 +72,21 @@
 @-webkit-keyframes eye-focus {
   0% {
     -webkit-filter: blur(0);
+            filter: blur(0);
   }
   100% {
-    -webkit-filter: blur(10px);
+    -webkit-filter: blur(1rem);
+            filter: blur(1rem);
   }
 }
 @keyframes eye-focus {
   0% {
     -webkit-filter: blur(0);
+            filter: blur(0);
   }
   100% {
-    -webkit-filter: blur(10px);
+    -webkit-filter: blur(1rem);
+            filter: blur(1rem);
   }
 }
 
@@ -92,8 +96,8 @@
             transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
@@ -103,8 +107,8 @@
             transform: scale(1);
   }
   100% {
-    -webkit-transform: scale(1.5);
-            transform: scale(1.5);
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
   }
 }
 
@@ -193,13 +197,13 @@ body {
   position: absolute;
   background-size: cover;
   background-repeat: no-repeat;
-  z-index: 333;
-  background: url(../../img/dr3.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(21, 22, 22, 0.8)), to(rgba(117, 112, 112, 0.8))), url(../../img/dr3.jpg);
+  background-image: linear-gradient(to bottom, rgba(21, 22, 22, 0.8), rgba(117, 112, 112, 0.8)), url(../../img/dr3.jpg);
   -webkit-filter: blur(0);
           filter: blur(0);
   -webkit-animation: eye-focus 6s ease-in infinite 6s alternate,  focus-shift 6s ease-in infinite alternate;
           animation: eye-focus 6s ease-in infinite 6s alternate,  focus-shift 6s ease-in infinite alternate;
-  opacity: 0.1;
+  opacity: 0.2;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -637,32 +641,41 @@ body {
   background-size: cover;
 }
 
-.footer::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  display: block;
-  top: 0;
-  left: 0;
-  position: absolute;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 333;
-  background: url(../../img/dr3.jpg);
-  -webkit-filter: blur(0);
-          filter: blur(0);
-  -webkit-animation: eye-focus 6s ease-in infinite 6s alternate,  focus-shift 6s ease-in infinite alternate;
-          animation: eye-focus 6s ease-in infinite 6s alternate,  focus-shift 6s ease-in infinite alternate;
-  opacity: 0.1;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .footer__social {
-  font-size: 2rem;
+  font-size: 4rem;
+  margin-bottom: 5rem;
 }
 
-.footer__social__legal {
-  font-size: 4rem;
+.footer__social .pointer {
+  display: block;
+}
+
+.drow:hover .footer__social--list {
+  opacity: 1;
+}
+
+.footer__social--header {
+  margin-bottom: 2rem;
+}
+
+.footer__social--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 2rem 0rem;
+  opacity: 0;
+}
+
+.footer__legal {
+  display: block;
+  margin: auto;
+  padding-top: 5rem;
+  font-size: 3rem;
 }
 /*# sourceMappingURL=main.css.map */

@@ -2,10 +2,10 @@
 
 @keyframes eye-focus {
     0% {
-      -webkit-filter: blur(0);
+      filter: blur(0);
     }
     100% {
-      -webkit-filter: blur(10px);
+      filter: blur(1rem);
     }
   }
   @keyframes focus-shift {
@@ -13,6 +13,9 @@
       transform: scale(1)
     }
     100% {
-      transform: scale(1.5)
+      transform: scale(1.2)
     }
   }
+
+
+ 

@@ -17,6 +17,9 @@
     @media only screen and (max-width: 75em) { @content }; 
    
 }
+
+
+// MIXIN FOR DROP EFFECT
 @mixin drop-effect() {
 
     content: '';
@@ -28,12 +31,17 @@
     position: absolute;
     background-size: cover;
     background-repeat: no-repeat;
-    z-index: 333;
-    background: url(../../img/dr3.jpg);
+  
+    background-image: linear-gradient(
+        to bottom,
+        rgba(rgb(21, 22, 22), 0.8),
+        rgba(rgb(117, 112, 112), 0.8)
+      ),
+      url(../../img/dr3.jpg);
     filter: blur(0);
     animation: eye-focus 6s ease-in infinite 6s alternate, 
       focus-shift 6s ease-in infinite alternate;
-    opacity: 0.1;
+    opacity: 0.2;
     background-repeat: no-repeat;
     background-size: cover;
    
