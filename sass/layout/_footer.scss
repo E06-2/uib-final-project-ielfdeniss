@@ -3,7 +3,10 @@
   width: 100%;
   height: 100%;
   padding: 10rem;
-  height: 50vh;
+  @include size(phone) {
+    padding: 7rem;
+  }
+  height: 60vh;
   background-image: linear-gradient(
       to top,
       rgba(rgb(21, 22, 22), 0.8),
@@ -37,14 +40,35 @@
       justify-content: space-around;
       margin: 2rem 0rem;
       opacity: 0;
-      li {
+
+      @include size(tab-hor) {
+        margin: 1rem 1rem;
+        font-size: 3rem;
+      }
+      @include size(tab-ver) {
+        margin: 1rem 1rem;
+        font-size: 3rem;
+      }
+      @include size(phone) {
+        margin: 2rem -5rem;
       }
     }
   }
+
   &__legal {
     display: block;
     margin: auto;
     padding-top: 5rem;
     font-size: 3rem;
+
+    @include hamburger() {
+      padding-top: 3rem;
+      font-size: 2rem;
+    }
+
+    @include size(phone) {
+      padding-top: 0rem;
+      font-size: 1.2rem;
+    }
   }
 }

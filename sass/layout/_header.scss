@@ -14,14 +14,10 @@
   @include hamburger {
     height: 65vh;
   }
-  .drop-effect{
+  .drop-effect {
     @include drop-effect;
     z-index: 0;
-
   }
-
-
-
 
   .navigation {
     font-size: 2rem;
@@ -101,42 +97,38 @@
     &--button {
       font-size: 3.4rem;
       position: absolute;
-      top: 5rem;
-      right: 5rem;
+      top: 2rem;
+      right: 2rem;
       display: none;
       @include hamburger {
         display: block;
       }
     }
   }
-  &-text{
-  
+  &-text {
     font-size: 3rem;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        &--name{
-          text-transform: uppercase;
-          display: block;
-          animation-name: leftSide;
-          animation-duration: 8s;
-          animation-timing-function: 2s;
-        }
-        &--description{
-          display: block;
-          animation-name: rightSide;
-          animation-duration: 7s;
-          animation-timing-function: 4s;
-        }
-        @include hamburger {
-          font-size: 1.3rem;
-          opacity: .1;
-          top: 60%; 
-        }
-
-
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    &--name {
+      text-transform: uppercase;
+      display: block;
+      animation-name: leftSide;
+      animation-duration: 8s;
+      animation-timing-function: 2s;
+    }
+    &--description {
+      display: block;
+      animation-name: rightSide;
+      animation-duration: 7s;
+      animation-timing-function: 4s;
+    }
+    @include hamburger {
+      font-size: 1.3rem;
+      opacity: 0.1;
+      top: 60%;
+    }
   }
-
 }
