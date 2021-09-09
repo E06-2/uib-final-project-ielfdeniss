@@ -21,42 +21,30 @@
   &__social {
     font-size: 4rem;
     margin-bottom: 5rem;
-    .pointer{
+    .pointer {
       display: block;
     }
-    .drow:hover &--list{
+    .drow:hover &--list {
       opacity: 1;
-   
-
     }
-   
-    &--header{
+
+    &--header {
       margin-bottom: 2rem;
-
     }
-    &--list{
+    &--list {
       display: flex;
       flex-direction: row;
       justify-content: space-around;
       margin: 2rem 0rem;
       opacity: 0;
-      li{
-        
+      li {
       }
-   
-    
-
     }
-
-   
   }
   &__legal {
     display: block;
-   margin: auto;
-   padding-top: 5rem;
+    margin: auto;
+    padding-top: 5rem;
     font-size: 3rem;
-  
-    
-   
   }
 }

@@ -25,6 +25,7 @@
       position: relative;
       perspective: 150rem;
       width: 20%;
+      height: 100%;
 
       @include size(tab-hor) {
         width: 35%;
@@ -41,9 +42,11 @@
       }
 
       &__image {
-        height: 23rem;
+        height: 100%;
         img {
           width: 100%;
+          min-height: 100%;
+
         }
       }
 
@@ -58,6 +61,7 @@
         box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
       }
       &__back {
+        
         transform: rotateY(180deg);
         position: absolute;
         top: 0;

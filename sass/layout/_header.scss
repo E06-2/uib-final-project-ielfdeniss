@@ -14,14 +14,14 @@
   @include hamburger {
     height: 65vh;
   }
+  .drop-effect{
+    @include drop-effect;
+    z-index: 0;
+
+  }
 
 
-&::after{
-  @include drop-effect;
-   
-   
 
-}
 
   .navigation {
     font-size: 2rem;
